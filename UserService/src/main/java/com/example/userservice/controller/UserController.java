@@ -1,9 +1,8 @@
-package com.example.product.controller;
+package com.example.userservice.controller;
 
 
 
-import com.example.product.entity.Singer;
-import com.example.product.service.UserService;
+import com.example.userservice.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +19,7 @@ public class SingerController {
     UserService userService;
 
     @GetMapping("/singer")
-    public List<Singer> getUser() {
+    public List<User> getUser() {
         return userService.getAllUser();
     }
 }
